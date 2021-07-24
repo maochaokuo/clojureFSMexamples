@@ -27,5 +27,6 @@
     <orderEntry type="library" name="Leiningen: org.clojure/tools.analyzer:0.1.0-beta12" level="project" />
     <orderEntry type="library" name="Leiningen: org.ow2.asm/asm-all:4.1" level="project" />
     <orderEntry type="library" name="Leiningen: reduce-fsm:0.1.4" level="project" />
+    <orderEntry type="library" name="Leiningen: server-socket:1.0.0" level="project" />
   </component>
 </module>
