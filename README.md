@@ -33,10 +33,15 @@ the most recent version, maybe install it and make system up to date
 ## change log
 ### 2021/7/24
 - initial commit
+  
 - start with reduce-fsm
 - reduce-fsm 首頁文件中的範例都測試成功
 - reduce-fsm example fsm-dispatch-examples 不 work
 - reduce-fsm example simple-server 不 work
+
+- start with tilakone
+- tilakone 首頁 tilakoneCountAbExample 不 work
+- tilakone simple 初測可
 
 #
 #
