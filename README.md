@@ -41,7 +41,8 @@ the most recent version, maybe install it and make system up to date
 
 - start with tilakone
 - tilakone 首頁 tilakoneCountAbExample 不 work
-- tilakone simple 初測可
+- tilakone simple 初測可，後面有錯
+- tilakone 僅 light-machine 可用
 
 #
 #

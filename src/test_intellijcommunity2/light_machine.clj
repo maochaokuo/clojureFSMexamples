@@ -1,4 +1,4 @@
-(ns example.light-machine
+(ns test-intellijcommunity2.light-machine
   (:require [tilakone.core :as tk]))
 
 ;; https://github.com/davidkpiano/xstate#finite-state-machines
@@ -40,7 +40,9 @@
                                     ::tk/to "green"}]}]
    ::tk/state  "green"})
 
-(->> (repeat 5 "TIMER")
-     (reduce tk/apply-signal light-machine)
-     ::tk/state)
-;=> "red"
+(comment
+  (->> (repeat 5 "TIMER")
+       (reduce tk/apply-signal light-machine)
+       ::tk/state)
+  ;=> "red"
+  )

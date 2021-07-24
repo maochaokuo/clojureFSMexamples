@@ -1,4 +1,4 @@
-(ns example.fn-actions-and-guards
+(ns test-intellijcommunity2.fn-actions-and-guards
   (:require [tilakone.core :as tk :refer [_]]))
 
 ; You do not have use pure data states, you can use functions as guards and actions easily:
@@ -12,33 +12,32 @@
                       {::tk/on \b, ::tk/to :start, ::tk/actions [#(update % :count inc)]}
                       {::tk/on _, ::tk/to :start}]}])
 
-
 (def count-ab-process
   {::tk/states  count-ab
    ::tk/action! (fn [{::tk/keys [action] :as fsm}] (action fsm))
    ::tk/state   :start
    :count       0})
 
-
-(-> count-ab-process
-    (tk/apply-signal \a))
-;=> {::tk/state ::tk/found-a
-;    :count 0
-;    ...
-
-
-(-> count-ab-process
-    (tk/apply-signal \a)
-    (tk/apply-signal \b))
-;=> {::tk/state :start
-;    :count 1
-;    ...
-
-
-(reduce tk/apply-signal
-        count-ab-process
-        "abaaabc")
-;=> {::tk/state :start
-;    :count 2
-;    ...
-
+(comment
+  (-> count-ab-process
+      (tk/apply-signal \a))
+  ;=> {::tk/state ::tk/found-a
+  ;    :count 0
+  ;    ...
+  )
+(comment
+  (-> count-ab-process
+      (tk/apply-signal \a)
+      (tk/apply-signal \b))
+  ;=> {::tk/state :start
+  ;    :count 1
+  ;    ...
+  )
+(comment
+  (reduce tk/apply-signal
+          count-ab-process
+          "abaaabc")
+  ;=> {::tk/state :start
+  ;    :count 2
+  ;    ...
+  )

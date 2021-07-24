@@ -1,5 +1,8 @@
 (ns test-intellijcommunity2.tilakoneCountAbExample
-  (:require [tilakone.core :as tk :refer [_]]))
+  (:require [tilakone.core :as tk :refer [_]]
+            [tilakone.util :as tku]
+            [tilakone.schema :as tks]
+            [tilakone :as tt :refer [_]]))
 
 ; State definitions, pure data here:
 
@@ -23,8 +26,9 @@
    :count       0})
 
 ; Lets apply same inputs to our FSM:
-
+(comment
   (->> ["abaaabc" "aaacb" "bbbcab"]
        (map (partial reduce tk/apply-signal count-ab))
        (map :count))
   ;=> (2 0 1)
+  )

@@ -27,7 +27,7 @@
    :value       0})
 
 (comment
-  (tks/validate-fsm count-ab-process)
+  (tks/validate-process count-ab-process)
   ;=> {::tk/states ...
   )
 ; Try to send some signals:

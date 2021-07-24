@@ -20,5 +20,8 @@
                  ;:init-ns test-intellijcommunity2.fsm-dispatch-examples
                  ;:init-ns test-intellijcommunity2.simple-server
                  ;:init-ns test-intellijcommunity2.tilakoneCountAbExample
-                 :init-ns test-intellijcommunity2.simple
+                 ;:init-ns test-intellijcommunity2.simple
+                 ;:init-ns test-intellijcommunity2.count-ab-example
+                 ;:init-ns test-intellijcommunity2.fn-actions-and-guards
+                 :init-ns test-intellijcommunity2.light-machine
                  })
